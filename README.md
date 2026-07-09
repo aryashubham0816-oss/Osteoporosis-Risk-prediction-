@@ -1,38 +1,54 @@
-# Osteoporosis Risk Prediction
+# 🦴 Osteoporosis Risk Prediction using Machine Learning
 
-An end-to-end machine learning pipeline for predicting osteoporosis risk using structured healthcare data. This project is designed for internship/project submission and demonstrates a complete ML workflow from data exploration to model deployment.
+A complete Machine Learning project that predicts the risk of osteoporosis using patient demographic and clinical information. This project demonstrates an end-to-end ML pipeline including data preprocessing, exploratory data analysis (EDA), model training, hyperparameter tuning, evaluation, feature importance analysis, and model persistence.
 
-## Dataset Description
+---
 
-The dataset contains **1,958 patient records** with **15 features** (after removing ID):
+## 📌 Project Overview
 
-| Feature | Type | Description |
-|---------|------|-------------|
-| Age | Numeric | Patient age (18-90 years) |
-| Gender | Categorical | Male / Female |
-| Hormonal Changes | Categorical | Normal / Postmenopausal |
-| Family History | Categorical | Yes / No |
-| Race/Ethnicity | Categorical | Asian / Caucasian / African American |
-| Body Weight | Categorical | Underweight / Normal |
-| Calcium Intake | Categorical | Low / Adequate |
-| Vitamin D Intake | Categorical | Sufficient / Insufficient |
-| Physical Activity | Categorical | Active / Sedentary |
-| Smoking | Categorical | Yes / No |
-| Alcohol Consumption | Categorical | Moderate |
-| Medical Conditions | Categorical | Rheumatoid Arthritis / Hyperthyroidism |
-| Medications | Categorical | Corticosteroids |
-| Prior Fractures | Categorical | Yes / No |
-| **Osteoporosis** | **Target** | **0 = No, 1 = Yes** |
+Osteoporosis is a common bone disease that weakens bones and increases fracture risk. Early identification of high-risk patients can help healthcare professionals recommend preventive treatments and lifestyle changes.
 
-The dataset is perfectly balanced (50% positive, 50% negative).
+This project develops a predictive machine learning model using structured healthcare data to classify whether a patient is at risk of osteoporosis.
 
-## Project Structure
+---
+
+## ✨ Features
+
+- Complete Exploratory Data Analysis (EDA)
+- Data Cleaning & Preprocessing
+- Feature Encoding
+- Missing Value Analysis
+- Correlation Analysis
+- Multiple Machine Learning Models
+- Hyperparameter Tuning using GridSearchCV
+- Model Evaluation & Comparison
+- Feature Importance Analysis
+- ROC Curve & Precision-Recall Curve
+- Model Serialization using Joblib
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Language | Python 3 |
+| Libraries | Pandas, NumPy, Scikit-learn |
+| Visualization | Matplotlib |
+| Model Saving | Joblib |
+| IDE | VS Code |
+
+---
+
+# 📂 Project Structure
 
 ```
-C:\a_project1\
-├── dataset\
-│   └── raw_dataset_copy.csv       # Original dataset
-├── reports\                       # Generated visualizations & results
+osteoporosis-risk-prediction/
+│
+├── dataset/
+│   └── raw_dataset_copy.csv
+│
+├── reports/
 │   ├── age_analysis.png
 │   ├── categorical_analysis.png
 │   ├── confusion_matrix.png
@@ -45,126 +61,209 @@ C:\a_project1\
 │   ├── precision_recall_curve.png
 │   ├── roc_curve.png
 │   └── target_distribution.png
-├── main.py                        # Complete ML pipeline
-├── trained_model.pkl              # Saved model + artifacts
-├── requirements.txt               # Python dependencies
-└── README.md                      # This file
+│
+├── main.py
+├── trained_model.pkl
+├── requirements.txt
+└── README.md
 ```
 
-## Installation
+---
 
-### Prerequisites
-- Python 3.10+
-- pip (Python package installer)
+# 📊 Dataset Information
 
-### Setup
+- **Total Records:** 1,958
+- **Features:** 15
+- **Target Variable:** Osteoporosis
+- **Classes:** Balanced (50% Positive, 50% Negative)
+
+### Features Used
+
+- Age
+- Gender
+- Hormonal Changes
+- Family History
+- Race/Ethnicity
+- Body Weight
+- Calcium Intake
+- Vitamin D Intake
+- Physical Activity
+- Smoking
+- Alcohol Consumption
+- Medical Conditions
+- Medications
+- Prior Fractures
+
+Target:
+
+- **0 → No Osteoporosis**
+- **1 → Osteoporosis**
+
+---
+
+# ⚙ Machine Learning Workflow
+
+```
+Dataset
+   │
+   ▼
+Data Cleaning
+   │
+   ▼
+Exploratory Data Analysis
+   │
+   ▼
+Feature Encoding
+   │
+   ▼
+Train-Test Split
+   │
+   ▼
+Model Training
+   │
+   ▼
+Hyperparameter Tuning
+   │
+   ▼
+Performance Evaluation
+   │
+   ▼
+Feature Importance
+   │
+   ▼
+Model Saving
+```
+
+---
+
+# 🤖 Models Implemented
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- Support Vector Machine (SVM)
+
+---
+
+# 🏆 Best Model
+
+After hyperparameter tuning, the **Random Forest Classifier** achieved the best performance.
+
+| Metric | Score |
+|---------|-------|
+| Accuracy | **83.42%** |
+| Precision | **97.12%** |
+| Recall | **68.88%** |
+| F1 Score | **80.60%** |
+| ROC-AUC | **87.61%** |
+
+---
+
+# 📈 Model Comparison
+
+| Model | Accuracy | Precision | Recall | F1 Score |
+|--------|----------|-----------|--------|----------|
+| Logistic Regression | 79.85% | 84.21% | 73.47% | 78.47% |
+| Decision Tree | 83.42% | 95.17% | 70.41% | 80.94% |
+| ⭐ Random Forest | **83.42%** | **97.12%** | **68.88%** | **80.60%** |
+| SVM | 81.89% | 91.39% | 70.41% | 79.54% |
+
+---
+
+# 📌 Key Findings
+
+- Age is the most influential predictor of osteoporosis.
+- Family history significantly affects disease risk.
+- Race/Ethnicity contributes to prediction performance.
+- Calcium and Vitamin D intake improve prediction quality.
+- Random Forest provided the most balanced performance among all models.
+
+---
+
+# 📊 Visualizations Generated
+
+The project automatically generates:
+
+- Target Distribution
+- Age Distribution
+- Gender Analysis
+- Missing Value Analysis
+- Correlation Heatmap
+- Outlier Detection
+- Confusion Matrix
+- ROC Curve
+- Precision-Recall Curve
+- Feature Importance Graph
+
+---
+
+# 🚀 Installation
+
+Clone the repository
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/osteoporosis-prediction.git
-cd osteoporosis-prediction
+git clone https://github.com/aryashubham0816-oss/Osteoporosis-Risk-prediction-.git
+```
 
-# Install dependencies
+Move into the project directory
+
+```bash
+cd Osteoporosis-Risk-prediction-
+```
+
+Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### Dependencies
-- numpy
-- pandas
-- scikit-learn
-- matplotlib
-- seaborn
+---
 
-## How to Run
+# ▶ Running the Project
 
 ```bash
 python main.py
 ```
 
-This will execute the complete pipeline:
+The program will automatically:
 
-1. **Load & Explore Data** — displays dataset overview, statistics, and info
-2. **Exploratory Data Analysis** — generates all visualizations in `reports/`
-3. **Data Preprocessing** — handles missing values, encodes categories, scales features
-4. **Model Training** — trains Logistic Regression, Random Forest, SVM, and Decision Tree
-5. **Hyperparameter Tuning** — GridSearchCV on Random Forest
-6. **Model Evaluation** — confusion matrix, ROC curve, classification report
-7. **Feature Importance** — identifies top risk factors
-8. **Error Analysis** — analyzes false positives/negatives
-9. **Save Artifacts** — saves trained model to `trained_model.pkl`
+- Load the dataset
+- Perform EDA
+- Train all models
+- Compare performance
+- Tune Random Forest
+- Generate visualizations
+- Save the trained model
 
-## Model Performance Summary
+---
 
-After hyperparameter tuning, the best model was **Random Forest** with:
+# 📌 Future Improvements
 
-| Metric | Value |
-|--------|-------|
-| Accuracy | 83.42% |
-| Precision | 97.12% |
-| Recall | 68.88% |
-| F1 Score | 80.60% |
-| ROC-AUC | 87.61% |
+- Deploy as a Streamlit Web Application
+- Build a Flask REST API
+- Integrate SHAP for Explainable AI
+- Include Bone Mineral Density (BMD) data
+- Apply Deep Learning models
+- Perform Cross-Validation
+- Test on external clinical datasets
 
-### Model Comparison (before tuning)
+---
 
-| Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
-|-------|----------|-----------|--------|----------|---------|
-| Decision Tree | 83.42% | 95.17% | 70.41% | 80.94% | 86.82% |
-| Random Forest | 83.16% | 93.33% | 71.43% | 80.92% | 87.90% |
-| SVM | 81.89% | 91.39% | 70.41% | 79.54% | 87.65% |
-| Logistic Regression | 79.85% | 84.21% | 73.47% | 78.47% | 87.49% |
+# 📜 License
 
-### Best Hyperparameters (Random Forest)
-```json
-{
-  "max_depth": 10,
-  "min_samples_leaf": 4,
-  "min_samples_split": 10,
-  "n_estimators": 50
-}
-```
+This project is intended for educational and academic purposes.
 
-## Key Findings
+---
 
-1. **Age is the dominant risk factor** — accounts for ~83% of feature importance
-2. **Race/Ethnicity, Family History, and Gender** are secondary contributors
-3. **High precision (97%)** means very few false positives
-4. **Moderate recall (69%)** — some at-risk patients are missed, highlighting the need for further improvement
-5. **ROC-AUC of 0.88** indicates good overall discrimination ability
+# 👨‍💻 Author
 
-## Top Features for Prediction
+**Arya pednekar**
 
-1. Age
-2. Race/Ethnicity
-3. Family History
-4. Gender
-5. Calcium Intake
-6. Prior Fractures
-7. Hormonal Changes
-8. Vitamin D Intake
+Machine Learning | Python | Data Science
 
-## Error Analysis
+GitHub:
+https://github.com/aryashubham0816-oss
 
-- **False Positives: 4** — patients incorrectly flagged as high risk
-- **False Negatives: 61** — at-risk patients not detected
+---
 
-Recall is especially important because missing a true osteoporosis case means a patient misses preventive treatment, potentially leading to fractures and reduced quality of life.
-
-## Future Improvements
-
-1. **Deep Learning** — use TensorFlow/Keras DNN for potentially better performance
-2. **Class Imbalance Handling** — SMOTE or class weights if data becomes imbalanced
-3. **More Features** — incorporate BMD (Bone Mineral Density) measurements, vitamin levels, hormone levels
-4. **Explainability** — integrate SHAP/LIME for better model interpretability
-5. **Deployment** — Streamlit web app or Flask API for real-time predictions
-6. **Cross-Validation** — implement stratified k-fold for more robust evaluation
-7. **Feature Engineering** — create interaction terms or polynomial features
-8. **External Validation** — test on an independent dataset
-
-## License
-
-This project is for educational/demonstration purposes.
-
-## Author
-
-Submitted as part of internship/project work.
+⭐ If you found this project useful, consider giving it a Star.
