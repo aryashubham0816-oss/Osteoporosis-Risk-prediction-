@@ -1,10 +1,10 @@
-# 🦴 Osteoporosis Risk Prediction using Machine Learning
+#  Osteoporosis Risk Prediction using Machine Learning
 
 A complete Machine Learning project that predicts the risk of osteoporosis using patient demographic and clinical information. This project demonstrates an end-to-end ML pipeline including data preprocessing, exploratory data analysis (EDA), model training, hyperparameter tuning, evaluation, feature importance analysis, and model persistence.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Osteoporosis is a common bone disease that weakens bones and increases fracture risk. Early identification of high-risk patients can help healthcare professionals recommend preventive treatments and lifestyle changes.
 
@@ -12,7 +12,7 @@ This project develops a predictive machine learning model using structured healt
 
 ---
 
-## ✨ Features
+##  Features
 
 - Complete Exploratory Data Analysis (EDA)
 - Data Cleaning & Preprocessing
@@ -28,7 +28,7 @@ This project develops a predictive machine learning model using structured healt
 
 ---
 
-# 🛠 Tech Stack
+# Tech Stack
 
 | Category | Technologies |
 |----------|--------------|
@@ -40,7 +40,7 @@ This project develops a predictive machine learning model using structured healt
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```
 osteoporosis-risk-prediction/
@@ -70,7 +70,7 @@ osteoporosis-risk-prediction/
 
 ---
 
-# 📊 Dataset Information
+#  Dataset Information
 
 - **Total Records:** 1,958
 - **Features:** 15
@@ -101,7 +101,7 @@ Target:
 
 ---
 
-# ⚙ Machine Learning Workflow
+#  Machine Learning Workflow
 
 ```
 Dataset
@@ -136,7 +136,7 @@ Model Saving
 
 ---
 
-# 🤖 Models Implemented
+#  Models Implemented
 
 - Logistic Regression
 - Decision Tree
@@ -145,7 +145,7 @@ Model Saving
 
 ---
 
-# 🏆 Best Model
+#  Best Model
 
 After hyperparameter tuning, the **Random Forest Classifier** achieved the best performance.
 
@@ -159,7 +159,7 @@ After hyperparameter tuning, the **Random Forest Classifier** achieved the best 
 
 ---
 
-# 📈 Model Comparison
+#  Model Comparison
 
 | Model | Accuracy | Precision | Recall | F1 Score |
 |--------|----------|-----------|--------|----------|
@@ -170,7 +170,7 @@ After hyperparameter tuning, the **Random Forest Classifier** achieved the best 
 
 ---
 
-# 📌 Key Findings
+#  Key Findings
 
 - Age is the most influential predictor of osteoporosis.
 - Family history significantly affects disease risk.
@@ -180,7 +180,7 @@ After hyperparameter tuning, the **Random Forest Classifier** achieved the best 
 
 ---
 
-# 📊 Visualizations Generated
+#  Visualizations Generated
 
 The project automatically generates:
 
@@ -197,7 +197,7 @@ The project automatically generates:
 
 ---
 
-# 🚀 Installation
+#  Installation
 
 Clone the repository
 
@@ -219,7 +219,7 @@ pip install -r requirements.txt
 
 ---
 
-# ▶ Running the Project
+#  Running the Project
 
 ```bash
 python main.py
@@ -237,7 +237,7 @@ The program will automatically:
 
 ---
 
-# 📌 Future Improvements
+#  Future Improvements
 
 - Deploy as a Streamlit Web Application
 - Build a Flask REST API
@@ -249,13 +249,13 @@ The program will automatically:
 
 ---
 
-# 📜 License
+#  License
 
 This project is intended for educational and academic purposes.
 
 ---
 
-# 👨‍💻 Author
+#  Author
 
 **Arya pednekar**
 
@@ -266,4 +266,4 @@ https://github.com/aryashubham0816-oss
 
 ---
 
-⭐ If you found this project useful, consider giving it a Star.
+ If you found this project useful, consider giving it a Star.
